@@ -1,6 +1,6 @@
   :root {
     font-size: 100%;
-    font-family: 'MD IO';
+    font-family: 'MD IO', 'Source Code Pro', monospace; 
 
     --body-bg:hsl(0  0% 90%);
     --body-fg:     hsl(0  0%  0%);
