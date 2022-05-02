@@ -1,0 +1,171 @@
+  :root {
+    font-size: 100%;
+    font-family: 'MD IO';
+
+    --body-bg:hsl(0  0% 90%);
+    --body-fg:     hsl(0  0%  0%);
+
+    --neg-fg: hsl(0  0% 85%);
+    --neg-bg: hsl(0  0%  0%);
+
+    --bg-1: hsl(  0 70% 80%);
+    --bg-2: hsl( 40 70% 80%);
+    --bg-3: hsl( 90 70% 80%);
+    --bg-4: hsl(160 70% 80%);
+    --bg-5: hsl(200 70% 80%);
+    --bg-6: hsl(240 70% 80%);
+    --bg-7: hsl(300 70% 80%);
+
+    --fg-1: hsl(0  0%  0%);
+    --fg-2: hsl(0  0%  0%);
+    --fg-3: hsl(0  0%  0%);
+    --fg-4: hsl(0  0%  0%);
+    --fg-5: hsl(0  0%  0%);
+    --fg-6: hsl(0  0%  0%);
+    --fg-7: hsl(0  0%  0%);
+
+    --big-font: 1.5rem;
+    --smol-font: 0.875rem;
+    --wee-font: 0.675rem;
+  }
+
+  body {
+    margin: 1rem 0.5rem 2rem;
+    background-color: var(--body-bg);
+    color: var(--body-fg);
+    font-weight: 400;
+  }
+
+  h1 { 
+    margin: 0;
+    font-size: var(--big-font);
+  }
+  h1, h3 {
+    font-weight: 700;
+  }
+
+  main { margin: 2rem 0; }
+  footer p { font-size: var(--wee-font);}
+
+  .schultage {
+    display: grid;
+    grid-gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(30ch, 1fr));
+    list-style: none;
+    padding: 0;
+  }
+
+  .module-1 { 
+    background: var(--bg-1);
+    color: var(--fg-1);
+  }
+  .module-2 { 
+    background: var(--bg-2);
+    color: var(--fg-2);
+  }
+  .module-3 { 
+    background: var(--bg-3);
+    color: var(--fg-3);
+  }
+  .module-4 { 
+    background: var(--bg-4); 
+    color: var(--fg-4);
+  }
+  .module-5 { 
+    background: var(--bg-5); 
+    color: var(--fg-5);
+  }
+  .module-6 { 
+    background: var(--bg-6);
+    color: var(--fg-6);
+  }
+  .module-7 { 
+    background: var(--bg-7);
+    color: var(--fg-7);
+  }
+
+  .schultage h3,
+  .schultage p,
+  .schultage ul {
+    margin: 0 0.25rem 0.5rem;
+    font-size: var(--smol-font);
+  }
+  .schultage ul {
+    padding-left: 1.125rem;
+    list-style-type: disc;
+  }
+
+  .schultage .date-room {
+    display: flex;
+    justify-content: space-between;
+    background: var(--neg-bg);
+    color: var(--neg-fg);
+    padding: 0.125rem 0.25rem;
+    margin: 0 0 0.5rem;
+  }
+
+  header,
+  footer { grid-column: 1/-1; }
+
+  li { margin: 0; }
+
+  @media screen and (min-width: 700px) {
+    :root {
+      --big-font: 2rem;
+      --smol-font: 1rem;
+      --wee-font: 0.875rem;
+    }
+    body { padding: 1rem 2rem; }
+    main { margin: 3rem 0; }
+    .schultage { grid-gap: 2rem 2rem; }
+  }
+
+  @media print {
+    :root {
+      --body-bg: hsl(0 100% 100%);
+      --body-fg: hsl(0 100%   0%);
+
+      --neg-fg: hsl(0 100% 100%);
+      --neg-bg: hsl(0 100%  50%);
+
+      --bg-0: hsl(0 0% 100%);
+      --bg-1: hsl(0 0% 100%);
+      --bg-2: hsl(0 0% 100%);
+      --bg-3: hsl(0 0% 100%);
+      --bg-4: hsl(0 0% 100%);
+      --bg-5: hsl(0 0% 100%);
+      --bg-6: hsl(0 0% 100%);
+      --bg-7: hsl(0 0% 100%);
+
+      --big-font: 8pt;
+      --smol-font: 8pt;
+      --wee-font: 6pt;
+    }
+    .schultage { grid-gap: 12pt; }
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    :root {
+      --body-fg:hsl(0 0% 50%);
+      --body-bg:hsl(0 0%  3%);
+
+      --neg-fg: hsl(0 0% 45%);
+      --neg-bg: hsl(0 0% 10%);
+
+      --bg-1: hsl(0 0% 6%);
+      --bg-2: hsl(0 0% 6%);
+      --bg-3: hsl(0 0% 6%);
+      --bg-4: hsl(0 0% 6%);
+      --bg-5: hsl(0 0% 6%);
+      --bg-6: hsl(0 0% 6%);
+      --bg-7: hsl(0 0% 6%);
+
+      --fg-1: hsl(  0 60% 45%);
+      --fg-2: hsl( 30 60% 43%);
+      --fg-3: hsl( 115 60% 40%);
+      --fg-4: hsl(180 60% 40%);
+      --fg-5: hsl(210 60% 50%);
+      --fg-6: hsl(240 60% 55%);
+      --fg-7: hsl(320 50% 50%);
+    }
+  }
