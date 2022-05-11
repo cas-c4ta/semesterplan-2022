@@ -36,6 +36,12 @@
     font-weight: 400;
   }
 
+  /* Draft-Mode */
+
+  ul ul {
+    display: none;
+  }
+
   h1 { 
     margin: 0;
     font-size: var(--big-font);
